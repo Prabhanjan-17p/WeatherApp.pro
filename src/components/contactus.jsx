@@ -23,7 +23,7 @@ export function ContactUsPage() {
                     <a href="https://www.linkedin.com/in/pravanjan-17p" target="_blank" rel="noopener noreferrer">
                         <span className="bi bi-linkedin contact-icon"></span> LinkedIn
                     </a>
-                    <a href="https://github.com/pravanjanamanta" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Prabhanjan-17p" target="_blank" rel="noopener noreferrer">
                         <span className="bi bi-github contact-icon"></span> GitHub
                     </a>
                     <a href="https://www.instagram.com/debugwithkanha" target="_blank" rel="noopener noreferrer">
