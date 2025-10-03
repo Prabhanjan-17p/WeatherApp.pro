@@ -5,10 +5,9 @@ This app allows users to search for any city and get real-time weather updates, 
 Designed with **MUI** and **Bootstrap** for a modern and clean UI.  
 
 ---
+## 📹 Demo Video
 
-## 📹 Demo Video  
-[Download Demo Video](./public/weatherapp.mp4)
-*(Click the image to watch the demo video)*  
+[Watch the demo video](https://github.com/Prabhanjan-17p/WeatherApp.pro/raw/main/public/weatherapp.mp4)
 
 ---
 
