@@ -1,0 +1,58 @@
+.card-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card {
+  height: 80px;
+  width: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+/* Sunrise card gradient */
+.sunrise {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  /* orange/yellow tone */
+}
+
+/* Sunset card gradient */
+.sunset {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  /* purple/pink tone */
+}
+
+.card .title {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+
+.card-dia {
+  height: 80px;
+  width: 200px;
+  /* background-color: rgba(8, 102, 185, 0.979); */
+  background-color: rgba(137, 190, 236, 0.211);
+}
+
+.card-dia h3 {
+  font-size: 16px;
+}
+
+.card-dia-non {
+  height: 80px;
+  width: 200px;
+}
