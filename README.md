@@ -117,7 +117,7 @@ Prabhanjan Amanta
 
 🎓 MCA Student at Einstein Academy of Technology and Management, Bhubaneswar
 
-💼 Full-Stack Java Developer | Frontend Enthusiast | Data Analyst (Power BI, SQL)
+💼 Full-Stack Java Developer | Frontend Enthusiast 
 
 🌐 Portfolio: [Link](https://pravanjanamanta.netlify.app/)
 
