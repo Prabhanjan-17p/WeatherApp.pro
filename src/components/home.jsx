@@ -110,7 +110,14 @@ export function HomePage() {
                     <Paper
                         component="form"
                         onSubmit={(e) => e.preventDefault()}
-                        sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+                        sx={{
+                            p: '2px 4px', display: 'flex', alignItems: 'center', width: 400,
+                            width: { xs: '80vw', sm: 'auto' }, // Full width on mobile
+                            ml: { xs: '-135px', sm: 0 },       // negative margin-left ONLY on mobile
+                            mt: { xs: '-8px', sm: 0 },       // negative margin-left ONLY on mobile
+                            gap: { xs: 0, sm: 1 },           // no gap on mobile
+                            p: { xs: 0, sm: '2px 4px' },     // no padding on mobile
+                        }}
                     >
 
                         <InputBase
@@ -128,10 +135,11 @@ export function HomePage() {
                         </IconButton>
                     </Paper>
                 </div>
-                <div className="search-bar-convert d-flex g-2 justify-content-around">
+                <div className="search-bar-convert d-flex g-2 justify-content-around d-none d-md-flex">
                     <button className="convert-btn" onClick={() => setUnit("imperial")}>°F</button>
                     <button className="convert-btn" onClick={() => setUnit("metric")}>°C</button>
                 </div>
+
 
             </div>
             <div className="search-bar-body">
@@ -158,7 +166,7 @@ export function HomePage() {
                             </span>
                         </div>
                         <div className="d-flex flex-column">
-                            <span>{nowDay}</span>
+                            <span className="now-day">{nowDay}</span>
                             <span className="opacity-50 now-time">{nowTime}</span>
                         </div>
                     </div>
@@ -168,10 +176,12 @@ export function HomePage() {
                                 <p className="fw-bold">
                                     {Math.round(weather.main?.temp)}<span style={{ fontSize: "0.5em", verticalAlign: "super" }}>°C</span>
                                 </p>
-                                <p style={{ fontSize: "18px" }}>{weather.weather[0]?.description} </p>
+                                <div className="mob-desc-lat-lon">
+                                    <p >{weather.weather[0]?.description} </p>
                                 <div className="d-flex">
                                     <p className="me-4" style={{ fontSize: "10px", opacity: "0.5" }}>Lat: {weather.coord?.lat.toFixed(2)}</p>
                                     <p style={{ fontSize: "10px", opacity: "0.5" }}>Lon: {weather.coord?.lon.toFixed(2)}</p>
+                                </div>
                                 </div>
                             </>
                         ) : null}

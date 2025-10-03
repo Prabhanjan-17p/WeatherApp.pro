@@ -6,7 +6,7 @@ import { ContactUsPage } from "./contactus";
 
 export function HeroSection() {
     return (
-        <div className="container-fluid mainCls" style={{ height: "100vh", width: "100vw", overflow: "hidden" }}>
+        <div className="container-fluid mainCls" style={{overflow: "hidden" }}>
             <div className="back-video">
                 <video
                     autoPlay
@@ -24,7 +24,7 @@ export function HeroSection() {
             </div>
 
             <BrowserRouter>
-                <header className="d-flex justify-content-between align-items-center text-white headerCls p-2 mt-4">
+                <header className="d-flex justify-content-between align-items-center text-white headerCls p-2 mt-4 nav-bar-mob">
                     <div className="h3">ClimaVista</div>
                     <nav className="d-flex gap-4 nav-span">
                         <span>
@@ -37,7 +37,6 @@ export function HeroSection() {
                             <NavLink className={({ isActive }) => isActive ? 'nav-item-style active-link' : 'nav-item-style'} to="contact"> CONTACT </NavLink>
                         </span>
                     </nav>
-
                 </header>
                 <section>
                     <Routes>

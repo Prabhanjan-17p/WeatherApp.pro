@@ -46,6 +46,12 @@
   width: 200px;
   /* background-color: rgba(8, 102, 185, 0.979); */
   background-color: rgba(137, 190, 236, 0.211);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
 .card-dia h3 {
@@ -55,4 +61,57 @@
 .card-dia-non {
   height: 80px;
   width: 200px;
+}
+
+
+/*  */
+.mob-card-desc {
+  display: none;
+}
+
+
+/* Responsive for Mobile */
+@media (max-width: 480px) {
+  .card-dia-non {
+    display: none;
+  }
+
+  .card-dia {
+    display: none;
+  }
+
+  .mob-card-desc {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-top: -45px;
+  }
+
+  .hide-box1 {
+    display: flex;
+    gap: 10px;
+  }
+
+  .title{
+    color: white;
+    font-size: 12px;
+  }
+  .card-item h3{
+    color: white;
+    font-size: 10px;
+  }
+  .card-item {
+    width: 170px;
+    /* background: ; */
+  }
+  .circle-white{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.37);
+  }
+/* style={{ width: "80px", height: "20px", borderRadius: "50%", backgroundColor: "rgba(255, 255, 255, 0.37)", }} */
+
+
+
 }
