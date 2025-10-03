@@ -25,7 +25,7 @@ export function HeroSection() {
 
             <BrowserRouter>
                 <header className="d-flex justify-content-between align-items-center text-white headerCls p-2 mt-4 nav-bar-mob">
-                    <div className="h3">ClimaVista</div>
+                    <div className="h3 nav-head-sec">ClimaVista</div>
                     <nav className="d-flex gap-4 nav-span">
                         <span>
                             <NavLink className={({ isActive }) => isActive ? 'nav-item-style active-link' : 'nav-item-style'} to="/"> HOME </NavLink>

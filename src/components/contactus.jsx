@@ -30,6 +30,15 @@ export function ContactUsPage() {
                         <span className="bi bi-instagram contact-icon"></span> Instagram
                     </a>
                 </div>
+                <div className="d-flex justify-content-center align-items-center" style={{ marginTop: "15px" }}>
+                    <a href="https://pravanjanamanta.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <button className="btn btn-success">
+                            <img src="portofolio.png" alt="portfolio" style={{ height: "25px", width: "25px", marginRight: "8px" }} />
+                            Go to Portfolio
+                        </button>
+                    </a>
+                </div>
+
 
             </div>
         </div>

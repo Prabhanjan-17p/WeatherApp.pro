@@ -6,6 +6,12 @@
   width: 100vw,
 }
 
+.nav-head-sec{
+  color: rebeccapurple;
+  font-size: 10px;
+  font-weight: bold;
+}
+
 
 .nav-item-style {
   height: 100%;
