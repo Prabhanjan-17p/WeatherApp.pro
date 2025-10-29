@@ -4,7 +4,7 @@ export function TestPage(pros) {
 
 
     return (
-        <div class="container-fluid ">
+        <div className="container-fluid ">
             <div className="mob-card-desc">
                 <div className="hide-box1">
                     <div className="card card-item" style={{backgroundColor:"rgb(234 230 230 / 8%)"}}>
@@ -174,7 +174,7 @@ export function TestPage(pros) {
                     <h3>{pros.sunrise}</h3>
                 </div>
 
-                <div class="card sunset">
+                <div className="card sunset">
                     <div className="d-flex ">
                         <span
                             className="circle-white d-flex justify-content-center align-items-center me-2"

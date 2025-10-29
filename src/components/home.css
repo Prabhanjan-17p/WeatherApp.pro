@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    /* gap: 30px; */
 }
 
 .search-bar-convert {
@@ -51,7 +51,7 @@
 }
 
 .search-bar-input {
-    width: 27vw;
+    /* width: 27vw; */
     height: 80%;
 }
 
@@ -268,29 +268,35 @@
 /* Responsive for Mobile */
 @media (max-width: 480px) {
 
-    .search-bar {
-        background-color: rgb(234 230 230 / 8%);
-        border-radius: 10px;
-        height: 60px;
-        width: 90vw;
-        border: 1px solid whitesmoke;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        margin-top: -60px;
-        margin-top: 5px;
-        /* gap: 30px; */
-    }
 
-    .search-bar-convert {
-        display: none;
-    }
+  /* 🔸 Search bar container */
+  .search-bar {
+        border: none;
+        background: none;
+    width: 92vw;
+    height: auto;
+    padding: 6px 10px;
+    border-radius: 50px;
+    flex-direction: row;
+    margin: 10px 0 15px;
+    gap: 10px;
+  }
 
-    .search-bar-input {
-        width: 5vw;
-        height: 70%;
-    }
+  /* 🔸 Search input */
+  .search-bar-input {
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* 🔸 Convert button (°C/°F) hidden on small screens */
+  .search-bar-convert {
+    display: none;
+  }
 
 
 

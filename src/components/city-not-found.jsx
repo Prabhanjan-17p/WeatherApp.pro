@@ -13,14 +13,30 @@ export function CityNotFound(pros) {
                 marginTop: "-100px"
             }}
         >
-            {/* Bootstrap cloud slash icon */}
+            
             <i className="bi bi-cloud-slash mb-3" style={{ fontSize: "80px", color: "#ffffffff" }}></i>
 
             <h3 className="mb-2" style={{ color: "#ffffffff" }}>City Not Found</h3>
-            <p className="text-muted text-white"  >
-                Sorry, we couldn't find weather data for <strong className="text-danger">{pros.cityName}</strong>.<br />
-                Please check the spelling or try another city.
+            <p className="text-muted text-white mt-2">
+                <span
+                    style={{
+                        color: "white",
+                        opacity: "0.8",
+                        textAlign: "justify",        
+                        textJustify: "inter-word",   
+                        lineHeight: "1.6",           
+                        fontSize: "clamp(14px, 2vw, 16px)", 
+                        maxWidth: "420px",           
+                        display: "block",            
+                        margin: "0 auto",            
+                    }}
+                >
+                    Sorry, we couldn't find weather data for{" "}
+                    <strong className="text-danger">{pros.cityName}</strong>.
+                    Please check the spelling or try another city.
+                </span>
             </p>
+
         </div>
     );
 }

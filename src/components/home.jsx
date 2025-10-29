@@ -107,38 +107,78 @@ export function HomePage() {
         <div className="container-fluid text-white home-main">
             <div className="search-bar">
                 <div className="search-bar-input">
-                    <Paper
-                        component="form"
-                        onSubmit={(e) => e.preventDefault()}
-                        sx={{
-                            p: '2px 4px', display: 'flex', alignItems: 'center', width: 400,
-                            width: { xs: '80vw', sm: 'auto' }, // Full width on mobile
-                            ml: { xs: '-135px', sm: 0 },       // negative margin-left ONLY on mobile
-                            mt: { xs: '-8px', sm: 0 },       // negative margin-left ONLY on mobile
-                            gap: { xs: 0, sm: 1 },           // no gap on mobile
-                            p: { xs: 0, sm: '2px 4px' },     // no padding on mobile
+                    <div
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            width: "min(90vw, 520px)",
+                            padding: "4px 14px",
+                            borderRadius: "10px",
+                            backgroundColor: "rgba(255, 255, 255, 0.85)",
+                            boxShadow: "0 8px 18px rgba(0,0,0,0.25)",
+                            backdropFilter: "blur(10px)",
+                            transition: "0.3s ease",
                         }}
                     >
-
-                        <InputBase
-                            sx={{ ml: 1, flex: 1 }}
-                            placeholder="Search Your City"
-                            inputProps={{ 'aria-label': 'Search Your City' }}
+                        <input
+                            type="text"
+                            placeholder="Search your city..."
                             onChange={handleInputChange}
+                            style={{
+                                flex: 1,
+                                marginLeft: "12px",
+                                border: "none",
+                                outline: "none",
+                                background: "transparent",
+                                fontSize: "clamp(14px, 2vw, 16px)",
+                                color: "#000",
+                                fontFamily: "Poppins, sans-serif",
+                                letterSpacing: "0.5px",
+                            }}
                         />
-                        <IconButton onClick={handleSearch} type="button" sx={{ p: '10px' }} aria-label="search">
-                            <SearchIcon />
-                        </IconButton>
-                        <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-                        <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions">
-                            <DirectionsIcon />
-                        </IconButton>
-                    </Paper>
+
+                        <button
+                            onClick={handleSearch}
+                            style={{
+                                border: "none",
+                                background: "transparent",
+                                cursor: "pointer",
+                                padding: "6px 8px",
+                                borderRadius: "50%",
+                                transition: "0.3s",
+                            }}
+                            title="Search"
+                        >
+                            <i
+                                className="bi bi-search"
+                                style={{ fontSize: "20px", color: "#007bff" }}
+                            ></i>
+                        </button>
+
+                        <button
+                            style={{
+                                border: "none",
+                                background: "transparent",
+                                cursor: "pointer",
+                                padding: "6px 8px",
+                                borderRadius: "50%",
+                                transition: "0.3s",
+                            }}
+                            title="Use my location"
+                        >
+                            <i
+                                className="bi bi-geo-alt-fill"
+                                style={{ fontSize: "20px", color: "#dc3545" }}
+                            ></i>
+                        </button>
+                    </div>
+
                 </div>
-                <div className="search-bar-convert d-flex g-2 justify-content-around d-none d-md-flex">
+                {/* <div className="search-bar-convert d-flex g-2 justify-content-around d-none d-md-flex">
                     <button className="convert-btn" onClick={() => setUnit("imperial")}>°F</button>
                     <button className="convert-btn" onClick={() => setUnit("metric")}>°C</button>
-                </div>
+                </div> */}
 
 
             </div>
@@ -178,10 +218,10 @@ export function HomePage() {
                                 </p>
                                 <div className="mob-desc-lat-lon">
                                     <p >{weather.weather[0]?.description} </p>
-                                <div className="d-flex">
-                                    <p className="me-4" style={{ fontSize: "10px", opacity: "0.5" }}>Lat: {weather.coord?.lat.toFixed(2)}</p>
-                                    <p style={{ fontSize: "10px", opacity: "0.5" }}>Lon: {weather.coord?.lon.toFixed(2)}</p>
-                                </div>
+                                    <div className="d-flex">
+                                        <p className="me-4" style={{ fontSize: "10px", opacity: "0.5" }}>Lat: {weather.coord?.lat.toFixed(2)}</p>
+                                        <p style={{ fontSize: "10px", opacity: "0.5" }}>Lon: {weather.coord?.lon.toFixed(2)}</p>
+                                    </div>
                                 </div>
                             </>
                         ) : null}
